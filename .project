@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>General</name>
+	<comment>General DBeaver project</comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+		<nature>org.jkiss.dbeaver.DBeaverNature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>Bookmarks/memo</name>
+			<type>2</type>
+			<location>//E:/dbms_1900_ljs_250410/memo/</location>
+		</link>
+	</linkedResources>
+</projectDescription>
