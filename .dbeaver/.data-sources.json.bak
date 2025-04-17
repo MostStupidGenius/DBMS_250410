@@ -4,7 +4,7 @@
 		"oracle_thin-1961f99ffc3-134946f71be8ffbe": {
 			"provider": "oracle",
 			"driver": "oracle_thin",
-			"name": "DBMS_250410",
+			"name": "XE",
 			"save-password": true,
 			"configuration": {
 				"host": "localhost",
