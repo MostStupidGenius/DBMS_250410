@@ -77,6 +77,15 @@ WHERE FIRST_NAME
 LIKE '%e' -- e로 끝나는 문자열
 ORDER BY FIRST_NAME;
 
+-- LIKE 구문도 OR나 AND 연산자를 사용해
+-- 여러 조건을 나열할 수 있다.
+-- 다만, 가독성을 위해 소괄호(최우선연산자)를 활용해
+-- 묶어줄 필요가 있다.
+SELECT FIRST_NAME
+FROM EMPLOYEES
+WHERE (FIRST_NAME LIKE 'A%')
+	OR (FIRST_NAME LIKE '%e');
+
 -- IS NULL
 -- NULL 값은 값이 없음을 명시적으로 나타내는 특수한 값이다.
 -- NULL인지 여부를 검사할 때에는 =연산자가 아니라
