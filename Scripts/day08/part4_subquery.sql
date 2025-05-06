@@ -54,7 +54,7 @@ ORDER BY WEIGHT
 -- 실습1.
 -- PLAYER 테이블에서 가장 몸무게가 많이 나가는 플레이어의
 -- 이름과 몸무게를 출력하라
-SELECT PLAYER_NAME, WEIGHT
+SELECT ROWNUM, PLAYER_NAME, WEIGHT
 FROM PLAYER
 WHERE WEIGHT = ( -- 가장 큰 몸무게를 가진
 	SELECT MAX(WEIGHT)
@@ -66,8 +66,12 @@ AND
 ROWNUM <= 1 -- 결과가 두 명 이상일 경우
 -- 가장 위의 한 명만 가져오도록 제한한다.
 ;
-
-
+SELECT ROWNUM, PLAYER_NAME 
+FROM (
+SELECT PLAYER_NAME
+FROM PLAYER
+ORDER BY PLAYER_NAME
+);
 
 
 
