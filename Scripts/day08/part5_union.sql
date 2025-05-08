@@ -57,12 +57,22 @@ SELECT * FROM VIEW_DF vd;
 -- A - (A 교 B)
 SELECT * FROM VIEW_1970 v 
 MINUS
-SELECT * FROM VIEW_DF;
+SELECT * FROM VIEW_DF
+;
 -- MINUS를 했을 때, 결과행이 하나도 안 나온다면
 -- 모든 행이 겹친다는 의미이므로
 -- A테이블이 B테이블에 포함되어 있다는 의미가 된다.
 
-
+-- ORDER BY 절은 두 테이블이 집합 연산자를 사용하는 그 순간에는
+-- 사용할 수 없으며, 반드시 그 결과 테이블을 대상으로 
+-- ORDER BY를 시행해야 한다.
+SELECT *
+FROM (
+	SELECT * FROM VIEW_1970 v 
+	MINUS
+	SELECT * FROM VIEW_DF
+)
+ORDER BY BIRTH_DATE;
 
 
 
